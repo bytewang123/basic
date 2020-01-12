@@ -17,6 +17,9 @@ def isValid(s):
             if c == '{' and match != '}':
                 return False
     
+    '''
+    栈内没有元素。说明全部被匹配到了，否则说明还有括号未匹配
+    '''
     if len(stack) != 0:
         return False
 
