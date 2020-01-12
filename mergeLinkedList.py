@@ -33,24 +33,18 @@ def mergeTwoLists(l1, l2):
                 l2 = l2.next
                         
         if l1 == None:
-            while l2 != None:
-                if node == None:
-                    node = ListNode(l2.val)
-                    newL = node
-                else:
-                    node.next = ListNode(l2.val)
-                    node = node.next
-                l2 = l2.next
+            if node == None:
+                node = l2
+                newL = node
+            else:
+                node.next = l2
 
         if l2 == None:
-            while l1 != None:
-                if node == None:
-                    node = ListNode(l1.val)
-                    newL = node
-                else:
-                    node.next = ListNode(l1.val)
-                    node = node.next
-                l1 = l1.next
+            if node == None:
+                node = l1
+                newL = node
+            else:
+                node.next = l1
             
 
         return newL               
